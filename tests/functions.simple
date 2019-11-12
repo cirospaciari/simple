@@ -1,0 +1,26 @@
+var: a#int 10
+var: b#float 5
+
+fun: myFunction
+    var: c#float 0
+    
+    //a and b from parent context
+
+    set: c a
+    mul: c b
+
+    fun: subFunction d
+        add: d a
+        ret: d
+    end: 
+
+    call: subFunction c -> c //call subFunction with parameters
+
+    ret: c                  
+end:
+
+call: myFunction -> result //call without parameters
+
+var: message '#{0},#{1} results in: #{2}'
+format: message a b result
+puts: message 

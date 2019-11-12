@@ -1,0 +1,29 @@
+
+//new array
+array: myArray 10 20 30 40 50
+
+//length
+length: myArray -> length
+puts: length
+
+//push item/itens
+push: myArray 60 70 80 -> length
+puts: length
+
+//get item
+get: myArray 0 -> first
+puts: first
+
+//pop item
+pop: myArray -> last
+puts: last
+
+//print array
+puts: myArray
+
+while: length gt 0
+    pop: myArray -> value
+    puts: value
+
+    length: myArray -> length
+end:

@@ -1,0 +1,22 @@
+fun: factorial n
+    if: n equals 0
+        ret: 1
+    end:
+
+    var: n2 n
+    sub: n2 1
+
+    call: factorial n2 -> result
+
+    mul: n result
+    ret: n
+end:
+
+
+var: a 10
+
+call: factorial a -> result
+
+var: message '#{0} factorial results in: #{1}'
+format: message a result
+puts: message 

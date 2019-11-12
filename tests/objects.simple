@@ -1,0 +1,14 @@
+obj: user
+
+    var: name 'Ciro Spaciari'
+    var: age 10
+
+    fun: to_string
+        var: message 'name: #{0} age: #{1}'
+        format: message name age
+        ret: message
+    end:
+end:
+
+call: user.to_string -> message
+puts: message

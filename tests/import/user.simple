@@ -1,0 +1,18 @@
+class: User
+
+    var: name
+    var: surname
+
+    fun: new @name @surname
+        set: name @name
+        set: surname @surname
+    end:
+    
+    fun: get_fullname
+
+        var: fullname '#{0} #{1}'
+        format: fullname name surname
+
+        ret: fullname
+    end:
+end:
