@@ -2,8 +2,6 @@ import: ./user.simple
 
 new: User 'Ciro' 'Spaciari' -> user
 
-var user = new User('Ciro', 'Spaciari')
-
 call: user.get_fullname -> fullname
 
 puts: fullname
